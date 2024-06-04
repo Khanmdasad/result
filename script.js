@@ -81,7 +81,7 @@ function renderGenderTables(maleStudents, femaleStudents) {
         <table id="maleTable">
             <thead>
                 <tr>
-                    <th>Image</th>
+                    <th>ID</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Class</th>
@@ -95,7 +95,7 @@ function renderGenderTables(maleStudents, femaleStudents) {
         <table id="femaleTable">
             <thead>
                 <tr>
-                    <th>Image</th>
+                    <th>ID</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Class</th>
@@ -116,7 +116,7 @@ function renderTableContent(data, tableBodyId) {
     tableBody.innerHTML = "";
     data.forEach(student => {
         const row = `<tr>
-            <td></td>
+            <td>${student.id}</td>
             <td><img src="${student.img_src}" alt="Student Image" width="50" height="50"> ${student.first_name} ${student.last_name}</td>
             <td>${student.email}</td>
             <td>${student.class}</td>
